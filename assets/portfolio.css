@@ -1,6 +1,6 @@
 @font-face {
     font-family: SF Distant Galaxy;
-    src: url('./assets/SfDistantGalaxyItalic-WV3Y.ttf');
+    src: url('./assets/SfDistantGalaxyItalic-WV3Y.ttf') format("truetype");
 }
 
 *{
