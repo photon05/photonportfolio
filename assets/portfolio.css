@@ -1,0 +1,314 @@
+*{
+    margin: 0;
+    pad: 0;
+    box-sizing: border-box;
+    font-family: SF Distant Galaxy;
+}
+html{
+    scroll-behavior:smooth;
+}
+body {
+    min-height: 100vh;
+    background-image: url('nebula.webp');
+    /* background-image: url('planetRing.jpg'); */
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    backdrop-filter: blur(3px); 
+}
+.hidden1{
+    transform: translateX(500px);
+}
+.hidden2{
+    transform: translate(-500px);
+}
+.hidden{
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 0.8s;
+}
+.show{
+    opacity: 1;
+    transform: translateX(0);
+    transition: ease-in-out,1s;
+}
+header{
+    margin-top: -2vh;
+    background-color: rgba(0, 0, 0);
+}
+iframe{
+    background-color: black;
+}
+/* moving cursor light  */
+
+.light{
+    position:absolute;
+    z-index: -1;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0px 0px 100px 80px rgb(51, 168, 231);
+    backdrop-filter: blur(5px);
+}
+
+.logo{
+    margin-top: 20px;
+    font-size: 30px;
+    color:aliceblue;
+    font-family: SF Distant Galaxy, Arial, Helvetica, sans-serif;
+}
+.navigation{
+    top:0;
+    left: 0;
+}
+
+
+.navbar {
+    left: 0;
+    top: 0;
+    z-index: 1030;
+}
+
+.navbar ul {
+    overflow: auto;
+    margin-top: 4px;
+    background-color: transparent;
+}
+
+.navbar li {
+    float: left;
+    list-style-type: none;
+    margin: 18px 24px;
+    padding-top: 1px;
+}
+
+.navbar li a:hover{
+    text-shadow: 0px 0px 20px rgb(241, 218, 66);
+    color: rgb(250, 191, 43);
+    transition: ease-in-out,0.2s;
+    position: relative;
+}
+
+.navbar li a {
+    text-decoration: none;
+    font-family: SF Distant Galaxy;
+    font-size: 18px;
+    color: rgb(252, 206, 0);
+}
+.navbar .navitems{
+    margin-top: 25px;
+}
+
+section{
+    background-color: rgb(0, 0, 0,0.5);
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    padding-top: 10%;
+    align-items: left;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    
+    /* background-color: rgb(255, 255, 255); */
+}
+
+.textbelow{
+    font-family: SF Distant Galaxy,varino;
+    overflow: hidden;
+    color: rgb(252, 206, 0);
+    text-align: center;
+    font-size: 50px;
+    margin: 2px;
+}
+
+.text p{
+    font-family: SF Distant Galaxy,varino;
+    color: rgb(252, 206, 0);
+    /* 129,70,255 */
+    font-size: 50px;
+    margin: 2px;
+}
+.text #uppertxt{
+    color: rgb(255, 224, 84);
+}
+.text p:hover{
+    text-shadow: 0px 0px 20px rgba(255, 255, 0,0.5);
+    transition: ease-in-out,0.3s;
+}
+.text #subhead{
+    font-size: 20px;
+    padding: 0;
+    font-family: monospace;
+}
+.text #subhead span{
+    padding-top: 20px;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 20px;
+    margin-left: 0px;
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    /* background-color: rgba(0, 0, 0, 0.37); */
+    /* height:100%; */
+    align-items: center;
+
+}
+.about .container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* transform: translateX(100px); */
+    transition: ease-in-out,0.4s;
+}
+
+.about .heading{
+    font-family: varino;
+    margin:40px;
+    color: rgb(252, 206, 0);
+    font-size: 30px;
+}
+.about .container .image{
+    box-shadow: 0px 0px 100px rgb(129, 70, 218,0.333);
+    float: left;
+    margin-left: 20px;
+    background-size: cover;
+    max-width: 320px;
+    animation: backglow 10s infinite;
+}
+
+.about .container .info{
+    width: 60%;
+    margin: 20px;
+    margin-left: 40px;
+}
+.about .container .info p{
+    color: rgb(225, 221, 221);
+    font-family:SF Distant Galaxy ,"Space Mono", monospace;
+    font-size: 25px;
+    /* text-align: justify; */
+    text-shadow:0px 0px 50px rgb(129, 70, 218,0.6) ;
+
+}
+
+.skills{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills .heading{
+    font-family: varino;
+    text-shadow: 0px 0px 20px rgb(129, 70, 218);
+    margin:40px;
+    color: rgb(252, 206, 0);
+    font-size: 30px;
+}
+
+.skills .cardbox{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   
+}
+
+.skills .cardbox img{
+    width: 100px;
+    height: 100px;
+    margin: 50px;
+    padding: 20px;
+    background-color:rgb(36, 42, 48);
+    box-shadow: 0px 0px 100px rgb(129, 70, 218,0.333);
+    border-radius: 20px;
+}
+.skills .cardbox img:hover{
+    box-shadow: 0px 0px 40px rgb(129, 70, 218,0.333);
+    border-radius: 20%;
+    transition: ease-in-out,0.2s;
+}
+
+
+/* Footer Styling */
+
+#foot{
+    background: rgba(0, 0, 0, 0.55);
+    /* margin-top: 20vh; */
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+}
+ #foot .footitems{
+    color: white;
+    font-size: large;
+    transform: scale(1.2);
+    width: 30%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px;
+    justify-content: space-around;
+
+}
+#foor .footer-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#foot .footer-text .para{
+    font-family: SF Distant Galaxy,monospace, Helvetica;
+    color: rgb(252, 206, 0);
+    font-size: 25px;
+    margin: 2px;
+    text-align: center;
+}
+
+#foot .footitems img{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+/*
+#foot .footitems img:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 4px rgb(0, 0, 0);
+    transition: all,0.5s;
+} */
+
+
+
+@keyframes backglow {
+    0%   {box-shadow:0px 0px 60px rgb(129, 70, 218,0.25);}
+    10%  {box-shadow:0px 0px 60px rgb(129, 70, 218,0.3);}
+    20%  {box-shadow:0px 0px 60px rgb(129, 70, 218,0.35);}
+    30%  {box-shadow:0px 0px 60px rgb(129, 70, 218,0.4);}
+    40%  {box-shadow:0px 0px 60px rgb(129, 70, 218,0.35);}
+    50%  {box-shadow:0px 0px 60px rgb(129, 70, 218,0.3);}
+    60%  {box-shadow:0px 0px 60px rgb(129, 70, 218,0.25);}
+    70%  {box-shadow:0px 0px 60px rgb(129, 70, 218,0.2);}
+    80%  {box-shadow:0px 0px 60px rgb(129, 70, 218,0.25);}
+    90%  {box-shadow:0px 0px 60px rgb(129, 70, 218,0.3);}
+    100% {box-shadow:0px 0px 60px rgb(129, 70, 218,0.35);}
+}
+
+
+
+@media(max-width:992px){
+    .about .container .info{
+        width: 100%;
+        text-align: justify;
+    }
+}
