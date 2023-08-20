@@ -1,6 +1,6 @@
 @font-face {
     font-family: SF Distant Galaxy;
-    src: url('./assests/SfDistantGalaxyItalic-WV3Y.ttf') format('truetype');
+    src: url('./assets/SfDistantGalaxyItalic-WV3Y.ttf');
 }
 
 *{
@@ -26,7 +26,7 @@ body {
     transform: translateX(500px);
 }
 .hidden2{
-    transform: translate(-500px);
+    transform: translateX(-500px);
 }
 .hidden{
     opacity: 0;
@@ -128,7 +128,7 @@ section{
     overflow: hidden;
     color: rgb(252, 206, 0);
     text-align: center;
-    font-size: 50px;
+    font-size: 5rem;
     margin: 2px;
 }
 
@@ -312,8 +312,25 @@ section{
 
 
 @media(max-width:992px){
+    .navbar ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .about .container .info{
         width: 100%;
         text-align: justify;
+    }
+    .hidden1{
+        transform: translateX(0px);
+    }
+    .hidden2{
+        transform: translateX(0px);
+    }
+    .text .para{
+        font-size: 20px;
+    }
+    .textbelow{
+        font-size: 20px;
     }
 }
